@@ -1,0 +1,203 @@
+/* global styles */
+
+*{
+    box-sizing: border-box;
+}
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+body{
+    margin: 0;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: Helvetica Neue,sans-serif,Arial;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    width: 1100px;
+    margin: 0 auto;
+}
+/* end of global styles */
+
+
+.header{
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-left{
+    display: flex;
+    align-items: center; /* shineer nemsen*/
+}
+
+.header-left__logo{
+    width: 120px;
+    margin-right: 20px;
+}
+
+.header-left-nav{
+    display: flex;
+}
+
+.header-left-nav>li>a{
+    padding: 0 20px;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+    position: relative;
+}
+
+.header-left-nav>li>a:hover{
+    opacity: .7;
+}
+
+.header-left-nav>li.live>a::before{
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #e00034;
+    position: absolute;
+    left: 9px;
+    top: 7px;    
+}
+
+.header-left-nav>li.has-child>a::after{
+    content: '\f078';
+    font-family: 'FontAwesome',sans-serif;
+    margin-left: 5px;
+}
+
+
+
+.header-right{display: flex;}
+
+.header-right__item{margin-right: 30px;}
+.header-right__item:last-child{margin-right: 0;}
+
+.header-right-item__value img{margin-right: 5px;}
+.header-right-item__value span{font-weight: 500; font-size: 18px;}
+
+.header-right-item__label{
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.header-right-item__value .dollar{
+    color: #2adb00;
+}
+
+.header-right-item__value .dollar::after{
+    color: #000;
+    content: '|';
+    opacity: 0.1;
+    margin: 0 3px;
+}
+.header-right-item__value{
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+.feature-article{
+    display: flex;
+    width: 100%;
+    background: linear-gradient(90deg,#f4f4f4 7%,hsla(0,0%,100%,.220348) 17%);
+    border-radius: 10px;
+
+}
+
+.feature-article>*{
+    flex-basis: 50%;
+    height: 385px;
+    position: relative;
+}
+
+.feature-article__img{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.feature-article__img img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.feature-article__detail{
+    padding: 40px;
+}
+
+.feature-article-detail__tag{
+    display: inline-block;
+    background: linear-gradient(-120deg,#e08100,#c90027);
+    color: #fff;
+    padding: 8px 15px;
+    font-weight: bold;
+    border-radius: 100px;
+    font-size: 12px;
+    transition: 0.3s all;
+    margin-bottom: 20px;
+}
+
+.feature-article-detail__tag:hover{
+    padding: 8px 20px;
+}
+.feature-article-detail__title{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.feature-article-detail__description{
+    opacity: 0.4;
+    font-weight: 500;
+    line-height: 20px;
+    max-height: 60px;
+    overflow: hidden;
+}
+
+.feature-article__img{position: relative;}
+.feature-article__img img{transition: 0.3s all;}
+.feature-article__img:hover img{transform: scale(1.05,1.05);}
+
+.feature-article__img::after{
+    opacity: 0;
+    content: 'Дэлгэрэнгүй унших →';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    transition: .3s all;
+}
+
+.feature-article__img:hover::after{
+    opacity: 1;
+}
